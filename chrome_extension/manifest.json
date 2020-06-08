@@ -1,0 +1,23 @@
+
+{
+  "manifest_version": 2,
+  "name": "ZotZon browser extension",
+  "description": "Браузерное расширение для ZotZon",
+  "version": "0.0.1",
+  "author": "Vitaly",
+
+  "browser_action": {
+    "default_icon": "style/icon.png",
+    "default_title": "ZotZon browser extension",
+    "default_popup": "style/popup.html"
+  },
+  "icons": {
+    "128": "style/icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.avito.ru/*/*/*"],
+    "js": ["js/content.js"]
+  }],
+  "permissions": ["tabs","activeTab"]
+}
+

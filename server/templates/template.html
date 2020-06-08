@@ -1,0 +1,1828 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <title>
+   {{ titleTemp }}
+  </title>
+  <style id="__jsx-2850685227">
+   html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+     .image-gallery-slide:focus {
+   outline: none;
+  }
+
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+      font-size: 1rem;
+      margin: 0;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiSvgIcon">
+   .MuiSvgIcon-root {
+      fill: currentColor;
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      font-size: 1.5rem;
+      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .MuiSvgIcon-fontSizeSmall {
+      font-size: 1.25rem;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiContainer">
+   .MuiContainer-root {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    @media (min-width:600px) {
+      .MuiContainer-root {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+
+    @media (min-width:1280px) {
+      .MuiContainer-maxWidthLg {
+        max-width: 1280px;
+      }
+    }
+
+  </style>
+  <style data-jss="" data-meta="MuiPaper">
+   .MuiPaper-root {
+      color: rgba(0, 0, 0, 0.87);
+      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      background-color: #fff;
+    }
+
+    .MuiPaper-rounded {
+      border-radius: 4px;
+    }
+
+    .MuiPaper-elevation0 {
+      box-shadow: none;
+    }
+
+    .MuiPaper-elevation1 {
+      box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    .MuiPaper-elevation4 {
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+  <style data-jss="" data-meta="MuiAppBar">
+   .MuiAppBar-root {
+      width: 100%;
+      display: flex;
+      z-index: 1100;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      flex-direction: column;
+    }
+
+    .MuiAppBar-positionFixed {
+      top: 0;
+      left: auto;
+      right: 0;
+      position: fixed;
+    }
+
+    @media print {
+      .MuiAppBar-positionFixed {
+        position: absolute;
+      }
+    }
+
+
+    .MuiAppBar-colorPrimary {
+      color: #fff;
+      background-color: #222;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiBadge">
+   .MuiBadge-root {
+      display: inline-flex;
+      position: relative;
+      flex-shrink: 0;
+      vertical-align: middle;
+    }
+
+    .MuiBadge-badge {
+      height: 20px;
+      display: flex;
+      padding: 0 6px;
+      z-index: 1;
+      position: absolute;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
+      min-width: 20px;
+      box-sizing: border-box;
+      transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      align-items: center;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 500;
+      line-height: 1;
+      align-content: center;
+      border-radius: 10px;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+
+    .MuiBadge-colorSecondary {
+      color: #fff;
+      background-color: #19857b;
+    }
+
+
+
+    .MuiBadge-anchorOriginTopRightRectangle {
+      top: 0;
+      right: 0;
+      transform: scale(1) translate(50%, -50%);
+      transform-origin: 100% 0%;
+    }
+
+    .MuiBadge-anchorOriginTopRightRectangle.MuiBadge-invisible {
+      transform: scale(0) translate(50%, -50%);
+    }
+
+    .MuiBadge-invisible {
+      transition: transform 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiTypography">
+   .MuiTypography-root {
+      margin: 0;
+    }
+
+    .MuiTypography-body2 {
+      font-size: 0.875rem;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 1.43;
+      letter-spacing: 0.01071em;
+    }
+
+    .MuiTypography-body1 {
+      font-size: 1rem;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.00938em;
+    }
+
+    .MuiTypography-h3 {
+      font-size: 2rem;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 1.167;
+      letter-spacing: 0em;
+    }
+
+    @media (min-width:600px) {
+      .MuiTypography-h3 {
+        font-size: 2.5707rem;
+      }
+    }
+
+    @media (min-width:960px) {
+      .MuiTypography-h3 {
+        font-size: 2.7849rem;
+      }
+    }
+
+    @media (min-width:1280px) {
+      .MuiTypography-h3 {
+        font-size: 2.9991rem;
+      }
+    }
+    .MuiTypography-h6 {
+      font-size: 1.125rem;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 500;
+      line-height: 1.6;
+      letter-spacing: 0.0075em;
+    }
+
+    @media (min-width:600px) {
+      .MuiTypography-h6 {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (min-width:960px) {
+      .MuiTypography-h6 {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (min-width:1280px) {
+      .MuiTypography-h6 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .MuiTypography-subtitle1 {
+      font-size: 1rem;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 1.75;
+      letter-spacing: 0.00938em;
+    }
+
+    .MuiTypography-alignCenter {
+      text-align: center;
+    }
+
+    .MuiTypography-alignRight {
+      text-align: right;
+    }
+
+    .MuiTypography-noWrap {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .MuiTypography-gutterBottom {
+      margin-bottom: 0.35em;
+    }
+
+    .MuiTypography-colorInherit {
+      color: inherit;
+    }
+
+    .MuiTypography-colorPrimary {
+      color: #222;
+    }
+
+    .MuiTypography-colorTextSecondary {
+      color: rgba(0, 0, 0, 0.54);
+    }
+    .MuiTypography-displayBlock {
+      display: block;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiLink">
+
+      .MuiLink-underlineHover {
+      text-decoration: none;
+    }
+
+    .MuiLink-underlineHover:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+  <style data-jss="" data-meta="MuiButtonBase">
+   .MuiButtonBase-root {
+      color: inherit;
+      border: 0;
+      cursor: pointer;
+      margin: 0;
+      display: inline-flex;
+      outline: 0;
+      padding: 0;
+      position: relative;
+      align-items: center;
+      user-select: none;
+      border-radius: 0;
+      vertical-align: middle;
+      -moz-appearance: none;
+      justify-content: center;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-appearance: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .MuiButtonBase-root::-moz-focus-inner {
+      border-style: none;
+    }
+    @media print {
+      .MuiButtonBase-root {
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="MuiButton">
+   .MuiButton-root {
+      color: rgba(0, 0, 0, 0.87);
+      padding: 6px 16px;
+      font-size: 0.875rem;
+      min-width: 64px;
+      box-sizing: border-box;
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 500;
+      line-height: 1.75;
+      border-radius: 4px;
+      letter-spacing: 0.02857em;
+      text-transform: uppercase;
+    }
+
+    .MuiButton-root:hover {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+
+
+    @media (hover: none) {
+      .MuiButton-root:hover {
+        background-color: transparent;
+      }
+    }
+
+    .MuiButton-root:hover.Mui-disabled {
+      background-color: transparent;
+    }
+
+    .MuiButton-label {
+      width: 100%;
+      display: inherit;
+      align-items: inherit;
+      justify-content: inherit;
+    }
+
+    .MuiButton-text {
+      padding: 6px 8px;
+    }
+
+
+
+
+
+    .MuiButton-contained {
+      color: rgba(0, 0, 0, 0.87);
+      box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+      background-color: #e0e0e0;
+    }
+
+    .MuiButton-contained:hover {
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+      background-color: #d5d5d5;
+    }
+
+
+    .MuiButton-contained:active {
+      box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    }
+
+
+    @media (hover: none) {
+      .MuiButton-contained:hover {
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+        background-color: #e0e0e0;
+      }
+    }
+
+
+
+    .MuiButton-containedSecondary {
+      color: #fff;
+      background-color: #19857b;
+    }
+
+    .MuiButton-containedSecondary:hover {
+      background-color: rgb(17, 93, 86);
+    }
+
+    @media (hover: none) {
+      .MuiButton-containedSecondary:hover {
+        background-color: #19857b;
+      }
+    }
+
+
+    .MuiButton-colorInherit {
+      color: inherit;
+      border-color: currentColor;
+    }
+
+
+    .MuiButton-startIcon {
+      display: inherit;
+      margin-left: -4px;
+      margin-right: 8px;
+    }
+
+
+    .MuiButton-endIcon {
+      display: inherit;
+      margin-left: 8px;
+      margin-right: -4px;
+    }
+
+
+    .MuiButton-iconSizeSmall > *:first-child {
+      font-size: 18px;
+    }
+
+    .MuiButton-iconSizeMedium > *:first-child {
+      font-size: 20px;
+    }
+
+    .MuiButton-iconSizeLarge > *:first-child {
+      font-size: 22px;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiToolbar">
+   .MuiToolbar-root {
+      display: flex;
+      position: relative;
+      align-items: center;
+    }
+
+    .MuiToolbar-gutters {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    @media (min-width:600px) {
+      .MuiToolbar-gutters {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+
+    .MuiToolbar-regular {
+      min-height: 56px;
+    }
+
+    @media (min-width:0px) and (orientation: landscape) {
+      .MuiToolbar-regular {
+        min-height: 48px;
+      }
+    }
+
+    @media (min-width:600px) {
+      .MuiToolbar-regular {
+        min-height: 64px;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="MuiIconButton">
+   .MuiIconButton-root {
+      flex: 0 0 auto;
+      color: rgba(0, 0, 0, 0.54);
+      padding: 12px;
+      overflow: visible;
+      font-size: 1.5rem;
+      text-align: center;
+      transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-radius: 50%;
+    }
+
+    .MuiIconButton-root:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+
+
+    @media (hover: none) {
+      .MuiIconButton-root:hover {
+        background-color: transparent;
+      }
+    }
+
+    .MuiIconButton-colorInherit {
+      color: inherit;
+    }
+    .MuiIconButton-label {
+      width: 100%;
+      display: flex;
+      align-items: inherit;
+      justify-content: inherit;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiAvatar">
+   .MuiAvatar-root {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      font-size: 1.25rem;
+      align-items: center;
+      flex-shrink: 0;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      line-height: 1;
+      user-select: none;
+      border-radius: 50%;
+      justify-content: center;
+    }
+
+    .MuiAvatar-colorDefault {
+      color: #fff;
+      background-color: #bdbdbd;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiGrid">
+   .MuiGrid-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+
+    .MuiGrid-item {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+
+    .MuiGrid-align-items-xs-center {
+      align-items: center;
+    }
+
+    .MuiGrid-spacing-xs-1 {
+      width: calc(100% + 8px);
+      margin: -4px;
+    }
+
+    .MuiGrid-spacing-xs-1 > .MuiGrid-item {
+      padding: 4px;
+    }
+
+    .MuiGrid-spacing-xs-2 > .MuiGrid-item {
+      padding: 8px;
+    }
+
+    .MuiGrid-spacing-xs-3 > .MuiGrid-item {
+      padding: 12px;
+    }
+
+
+    .MuiGrid-spacing-xs-4 > .MuiGrid-item {
+      padding: 16px;
+    }
+
+    .MuiGrid-spacing-xs-5 {
+      width: calc(100% + 40px);
+      margin: -20px;
+    }
+
+    .MuiGrid-spacing-xs-5 > .MuiGrid-item {
+      padding: 20px;
+    }
+
+    .MuiGrid-spacing-xs-6 > .MuiGrid-item {
+      padding: 24px;
+    }
+
+    .MuiGrid-spacing-xs-7 > .MuiGrid-item {
+      padding: 28px;
+    }
+
+    .MuiGrid-spacing-xs-8 > .MuiGrid-item {
+      padding: 32px;
+    }
+
+    .MuiGrid-spacing-xs-9 > .MuiGrid-item {
+      padding: 36px;
+    }
+
+    .MuiGrid-spacing-xs-10 > .MuiGrid-item {
+      padding: 40px;
+    }
+
+
+    .MuiGrid-grid-xs-12 {
+      flex-grow: 0;
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    @media (min-width:600px) {
+      .MuiGrid-grid-sm-6 {
+        flex-grow: 0;
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+
+    @media (min-width:960px) {
+
+      .MuiGrid-grid-md-3 {
+        flex-grow: 0;
+        max-width: 25%;
+        flex-basis: 25%;
+      }
+
+      .MuiGrid-grid-md-8 {
+        flex-grow: 0;
+        max-width: 66.666667%;
+        flex-basis: 66.666667%;
+      }
+
+      .MuiGrid-grid-md-12 {
+        flex-grow: 0;
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+
+    @media (min-width:1280px) {
+      .MuiGrid-grid-lg-12 {
+        flex-grow: 0;
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }}
+
+  </style>
+  <style data-jss="" data-meta="MuiList">
+   .MuiList-root {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      list-style: none;
+    }
+
+    .MuiList-padding {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiListItem">
+   .MuiListItem-root {
+      width: 100%;
+      display: flex;
+      position: relative;
+      box-sizing: border-box;
+      text-align: left;
+      align-items: center;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      justify-content: flex-start;
+      text-decoration: none;
+    }
+
+    .MuiListItem-root.Mui-focusVisible {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .MuiListItem-root.Mui-selected,
+    .MuiListItem-root.Mui-selected:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .MuiListItem-root.Mui-disabled {
+      opacity: 0.5;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-avatar-165 {
+      margin-right: 16px;
+      background-color: #222;
+    }
+
+    .makeStyles-grid-166 {
+      display: flex;
+    }
+
+    .makeStyles-text-167 {
+      font-size: 12px;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiDrawer">
+   .MuiDrawer-docked {
+      flex: 0 0 auto;
+    }
+
+    .MuiDrawer-paper {
+      top: 0;
+      flex: 1 0 auto;
+      height: 100%;
+      display: flex;
+      outline: 0;
+      z-index: 1200;
+      position: fixed;
+      overflow-y: auto;
+      flex-direction: column;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .MuiDrawer-paperAnchorLeft {
+      left: 0;
+      right: auto;
+    }
+
+
+    .MuiDrawer-paperAnchorDockedLeft {
+      border-right: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+  </style>
+  <style data-jss="" data-meta="MuiInputBase">
+   @-webkit-keyframes mui-auto-fill {}
+
+    @-webkit-keyframes mui-auto-fill-cancel {}
+
+    .MuiInputBase-root {
+      color: rgba(0, 0, 0, 0.87);
+      cursor: text;
+      display: inline-flex;
+      position: relative;
+      font-size: 1rem;
+      box-sizing: border-box;
+      align-items: center;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 1.1876em;
+      letter-spacing: 0.00938em;
+    }
+
+    .MuiInputBase-root.Mui-disabled {
+      color: rgba(0, 0, 0, 0.38);
+      cursor: default;
+    }
+
+    .MuiInputBase-fullWidth {
+      width: 100%;
+    }
+
+    .MuiInputBase-input {
+      font: inherit;
+      color: currentColor;
+      width: 100%;
+      border: 0;
+      height: 1.1876em;
+      margin: 0;
+      display: block;
+      padding: 6px 0 7px;
+      min-width: 0;
+      background: none;
+      box-sizing: content-box;
+      animation-name: mui-auto-fill-cancel;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .MuiInputBase-input::-webkit-input-placeholder {
+      color: currentColor;
+      opacity: 0.42;
+      transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+
+    .MuiInputBase-input::-moz-placeholder {
+      color: currentColor;
+      opacity: 0.42;
+      transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+
+    .MuiInputBase-input:-ms-input-placeholder {
+      color: currentColor;
+      opacity: 0.42;
+      transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+
+    .MuiInputBase-input::-ms-input-placeholder {
+      color: currentColor;
+      opacity: 0.42;
+      transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+
+    .MuiInputBase-input:focus {
+      outline: 0;
+    }
+
+    .MuiInputBase-input:invalid {
+      box-shadow: none;
+    }
+
+    .MuiInputBase-input::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+
+    .MuiInputBase-input.Mui-disabled {
+      opacity: 1;
+    }
+
+    .MuiInputBase-input:-webkit-autofill {
+      animation-name: mui-auto-fill;
+      animation-duration: 5000s;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-webkit-input-placeholder {
+      opacity: 0 !important;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-moz-placeholder {
+      opacity: 0 !important;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:-ms-input-placeholder {
+      opacity: 0 !important;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input::-ms-input-placeholder {
+      opacity: 0 !important;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-webkit-input-placeholder {
+      opacity: 0.42;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-moz-placeholder {
+      opacity: 0.42;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus:-ms-input-placeholder {
+      opacity: 0.42;
+    }
+
+    label[data-shrink=false] + .MuiInputBase-formControl .MuiInputBase-input:focus::-ms-input-placeholder {
+      opacity: 0.42;
+    }
+
+  </style>
+  <style data-jss="" data-meta="MuiInput">
+   .MuiInput-root {
+      position: relative;
+    }
+
+    label + .MuiInput-formControl {
+      margin-top: 16px;
+    }
+
+
+    .MuiInput-underline:after {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+      border-bottom: 2px solid #222;
+      pointer-events: none;
+    }
+
+    .MuiInput-underline.Mui-focused:after {
+      transform: scaleX(1);
+    }
+
+    .MuiInput-underline.Mui-error:after {
+      transform: scaleX(1);
+      border-bottom-color: #ff1744;
+    }
+
+    .MuiInput-underline:before {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "\00a0";
+      position: absolute;
+      transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+      pointer-events: none;
+    }
+
+    .MuiInput-underline:hover:not(.Mui-disabled):before {
+      border-bottom: 2px solid rgba(0, 0, 0, 0.87);
+    }
+
+    .MuiInput-underline.Mui-disabled:before {
+      border-bottom-style: dotted;
+    }
+
+    @media (hover: none) {
+      .MuiInput-underline:hover:not(.Mui-disabled):before {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="MuiFormLabel">
+   .MuiFormLabel-root {
+      color: rgba(0, 0, 0, 0.54);
+      padding: 0;
+      font-size: 1rem;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.00938em;
+    }
+
+  </style>
+  <style data-jss="" data-meta="MuiInputLabel">
+   .MuiInputLabel-root {
+      display: block;
+      transform-origin: top left;
+    }
+
+    .MuiInputLabel-formControl {
+      top: 0;
+      left: 0;
+      position: absolute;
+      transform: translate(0, 24px) scale(1);
+    }
+
+
+    .MuiInputLabel-shrink {
+      transform: translate(0, 1.5px) scale(0.75);
+      transform-origin: top left;
+    }
+
+    .MuiInputLabel-animated {
+      transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+    }
+
+  </style>
+  <style data-jss="" data-meta="MuiFormControl">
+   .MuiFormControl-root {
+      border: 0;
+      margin: 0;
+      display: inline-flex;
+      padding: 0;
+      position: relative;
+      min-width: 0;
+      flex-direction: column;
+      vertical-align: top;
+    }
+
+    .MuiFormControl-marginNormal {
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    .MuiFormControl-fullWidth {
+      width: 100%;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiInputAdornment">
+   .MuiInputAdornment-root {
+      height: 0.01em;
+      display: flex;
+      max-height: 2em;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .MuiInputAdornment-positionStart {
+      margin-right: 8px;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiAutocomplete">
+   .MuiAutocomplete-root:hover .MuiAutocomplete-clearIndicatorDirty,
+    .MuiAutocomplete-root.Mui-focused .MuiAutocomplete-clearIndicatorDirty {
+      visibility: visible;
+    }
+
+    .MuiAutocomplete-inputRoot {
+      flex-wrap: wrap;
+    }
+
+    .MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot,
+    .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot {
+      padding-right: 30px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot {
+      padding-right: 56px;
+    }
+
+    .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+      width: 0;
+      min-width: 30px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiInput-root"] {
+      padding-bottom: 1px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+      padding: 9px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"][class*="MuiOutlinedInput-marginDense"] {
+      padding: 6px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"] {
+      padding-top: 19px;
+      padding-left: 8px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"][class*="MuiFilledInput-marginDense"] {
+      padding-bottom: 1px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"][class*="MuiFilledInput-marginDense"] .MuiAutocomplete-input {
+      padding: 4.5px 4px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"],
+    .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"] {
+      padding-right: 39px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"] {
+      padding-right: 65px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"] .MuiAutocomplete-input {
+      padding: 9px 4px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiFilledInput-root"] .MuiAutocomplete-endAdornment {
+      right: 9px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"][class*="MuiOutlinedInput-marginDense"] .MuiAutocomplete-input {
+      padding: 4.5px 4px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"],
+    .MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+      padding-right: 39px;
+    }
+
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+      padding-right: 65px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input {
+      padding: 9.5px 4px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+      padding-left: 6px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-endAdornment {
+      right: 9px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiInput-root"][class*="MuiInput-marginDense"] .MuiAutocomplete-input {
+      padding: 4px 4px 5px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiInput-root"][class*="MuiInput-marginDense"] .MuiAutocomplete-input:first-child {
+      padding: 3px 0 6px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiInput-root"] .MuiAutocomplete-input {
+      padding: 4px;
+    }
+
+    .MuiAutocomplete-inputRoot[class*="MuiInput-root"] .MuiAutocomplete-input:first-child {
+      padding: 6px 0;
+    }
+
+    .MuiAutocomplete-input {
+      opacity: 0;
+      flex-grow: 1;
+      text-overflow: ellipsis;
+    }
+
+    .MuiAutocomplete-inputFocused {
+      opacity: 1;
+    }
+
+    .MuiAutocomplete-endAdornment {
+      top: calc(50% - 14px);
+      right: 0;
+      position: absolute;
+    }
+
+    .MuiAutocomplete-clearIndicator {
+      padding: 4px;
+      visibility: hidden;
+      margin-right: -2px;
+    }
+
+    .MuiAutocomplete-popupIndicator {
+      padding: 2px;
+      margin-right: -2px;
+    }
+
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+    .makeStyles-buttonLeaf-409 {
+      color: black;
+      width: 100%;
+      display: flex;
+      font-size: 1rem;
+      align-items: center;
+      font-weight: 400;
+      padding-top: 0;
+      letter-spacing: 0;
+      text-transform: none;
+      justify-content: flex-start;
+    }
+
+    .makeStyles-buttonLeaf-409.depth-0 {
+      font-weight: 500;
+    }
+
+    .makeStyles-buttonLeaf-409:hover {
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    .makeStyles-buttonLeaf-409.active {
+      color: #19857b;
+      font-weight: 500;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-paper-285 {
+      width: 300px;
+    }
+
+    .makeStyles-wrapper-286 {
+      padding: 0px 24px;
+    }
+
+    .makeStyles-logoWrapper-287 {
+      display: flex;
+      min-height: 64px;
+      align-items: center;
+    }
+
+    .makeStyles-logo-288 {
+      height: 39px;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-appBar-6 {
+      color: black;
+      box-shadow: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      background-color: white;
+    }
+
+    @media (min-width:1280px) {
+      .makeStyles-appBarShift-8 {
+        width: calc(100% - 300px);
+      }
+    }
+
+    .makeStyles-grow-9 {
+      flex: 1 1 auto;
+    }
+
+    @media (min-width:1280px) {
+      .makeStyles-navIconHide-10 {
+        display: none;
+      }
+    }
+
+    @media (min-width:1280px) {
+      .makeStyles-drawer-11 {
+        width: 300px;
+        flex-shrink: 0;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-footer-450 {
+      padding: 48px 0px;
+      background-color: #fff;
+    }
+  </style>
+  <style data-jss="" data-meta="AppFrame">
+   #main-content {
+      outline: 0;
+      padding-top: 57px;
+    }
+
+    .AppFrame-root-1 {
+      width: 100%;
+      display: flex;
+    }
+
+    .AppFrame-container-2 {
+      position: relative;
+      padding-top: 96px;
+    }
+
+    @media (min-width:1280px) {
+      .AppFrame-container-2 {
+        padding-left: 48px;
+        padding-right: 48px;
+      }
+    }
+
+    @media print {
+      .AppFrame-skipNav-3 {
+        display: none;
+      }
+    }
+  </style>
+  <style data-jss="" data-meta="MuiCssBaseline">
+   html {
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    strong,
+    b {
+      font-weight: 700;
+    }
+
+    body {
+      color: rgba(0, 0, 0, 0.87);
+      margin: 0;
+      font-size: 0.875rem;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: 400;
+      line-height: 1.43;
+      letter-spacing: 0.01071em;
+      background-color: #fff;
+    }
+
+    @media print {
+      body {
+        background-color: #fff;
+      }
+    }
+
+    body::backdrop {
+      background-color: #fff;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiCard">
+   .MuiCard-root {
+      overflow: hidden;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiCardContent">
+   .MuiCardContent-root {
+      padding: 16px;
+    }
+
+    .MuiCardContent-root:last-child {
+      padding-bottom: 24px;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiCardMedia">
+   .MuiCardMedia-root {
+      display: block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-card-441 {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .makeStyles-cardMedia-442 {
+      padding-top: 100%;
+    }
+
+    .makeStyles-cardContent-443 {
+      flex-grow: 1;
+    }
+
+    .makeStyles-cardLink-444 {
+      text-decoration: none;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-sidebarSection-440 {
+      margin-top: 24px;
+    }
+  </style>
+  <style data-jss="" data-meta="MuiBreadcrumbs">
+   .MuiBreadcrumbs-ol {
+      margin: 0;
+      display: flex;
+      padding: 0;
+      flex-wrap: wrap;
+      list-style: none;
+      align-items: center;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-breadcrumbs-435 ol li:last-child {
+      pointer-events: none;
+    }
+  </style>
+  <style data-jss="" data-meta="makeStyles">
+   .makeStyles-mainGrid-434 {
+      margin-top: 24px;
+    }
+  </style>
+ </head>
+ <body>
+  <div id="__next">
+   <div class="AppFrame-root-1">
+    <header class="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary makeStyles-appBar-6 makeStyles-appBarShift-8 mui-fixed MuiPaper-elevation4">
+     <div class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters">
+      <button aria-label="openDrawer" class="MuiButtonBase-root MuiIconButton-root makeStyles-navIconHide-10 MuiIconButton-colorInherit" tabindex="0" type="button">
+       <span class="MuiIconButton-label">
+        <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+         <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z">
+         </path>
+        </svg>
+       </span>
+       <span class="MuiTouchRipple-root">
+       </span>
+      </button>
+      <div class="makeStyles-grow-9">
+      </div>
+      <button aria-haspopup="true" aria-label="Change language" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-colorInherit" data-ga-event-action="language" data-ga-event-category="header" tabindex="0" title="Change language" type="button">
+       <span class="MuiButton-label">
+        <span class="MuiButton-startIcon MuiButton-iconSizeMedium">
+         <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+
+         </svg>
+        </span>
+        <p class="MuiTypography-root MuiTypography-body1">
+         Русский
+        </p>
+        <span class="MuiButton-endIcon MuiButton-iconSizeMedium">
+         <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </span>
+       </span>
+       <span class="MuiTouchRipple-root">
+       </span>
+      </button>
+      <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button">
+       <span class="MuiIconButton-label">
+        <span class="MuiBadge-root">
+         <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+          </path>
+         </svg>
+         <span class="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorSecondary MuiBadge-invisible">
+         </span>
+        </span>
+       </span>
+       <span class="MuiTouchRipple-root">
+       </span>
+      </button>
+      <button aria-label="show 4 new mails" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button">
+       <span class="MuiIconButton-label">
+        <span class="MuiBadge-root">
+         <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z">
+          </path>
+         </svg>
+         <span class="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorSecondary">
+          4
+         </span>
+        </span>
+       </span>
+       <span class="MuiTouchRipple-root">
+       </span>
+      </button>
+      <button aria-label="show 17 new notifications" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button">
+       <span class="MuiIconButton-label">
+        <span class="MuiBadge-root">
+         <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+          <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z">
+          </path>
+         </svg>
+         <span class="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorSecondary">
+          17
+         </span>
+        </span>
+       </span>
+       <span class="MuiTouchRipple-root">
+       </span>
+      </button>
+      <div class="MuiGrid-root makeStyles-grid-166">
+       <button class="MuiButtonBase-root MuiButton-root MuiButton-text" tabindex="0" type="button">
+        <span class="MuiButton-label">
+         <div class="MuiAvatar-root MuiAvatar-circle makeStyles-avatar-165 MuiAvatar-colorDefault">
+          <div aria-controls="profile-menu" aria-disabled="false" aria-haspopup="true" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary" role="button" tabindex="0">
+           <span class="MuiButton-label">
+            В
+            Ч
+           </span>
+           <span class="MuiTouchRipple-root">
+           </span>
+          </div>
+         </div>
+         <p class="MuiTypography-root makeStyles-text-167 MuiTypography-body1 MuiTypography-alignRight">
+          Виталий
+          Ч.
+         </p>
+        </span>
+        <span class="MuiTouchRipple-root">
+        </span>
+       </button>
+      </div>
+      <a aria-disabled="false" aria-label="add listing" class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/private/listings/add" role="button" tabindex="0">
+       <span class="MuiButton-label">
+        <span class="MuiButton-startIcon MuiButton-iconSizeMedium">
+         <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z">
+          </path>
+         </svg>
+        </span>
+        <p class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap">
+         Добавить Объявление
+        </p>
+       </span>
+       <span class="MuiTouchRipple-root">
+       </span>
+      </a>
+     </div>
+    </header>
+    <nav aria-label="mainNavigation" class="makeStyles-drawer-11">
+     <div class="PrivateHiddenCss-lgUp-299">
+      <div class="PrivateSwipeArea-root-467 PrivateSwipeArea-anchorLeft-468" style="width: 20px;">
+      </div>
+     </div>
+     <div class="PrivateHiddenCss-mdDown-297">
+      <div class="MuiDrawer-root MuiDrawer-docked">
+       <div class="MuiPaper-root MuiDrawer-paper makeStyles-paper-285 MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft MuiPaper-elevation0">
+        <div>
+         <div class="makeStyles-wrapper-286">
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-logoWrapper-287 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/">
+           <svg class="makeStyles-logo-288" viewbox="0 0 1388.7 237.8">
+            <style>
+             .logo_svg__st1 {
+                      fill: #005f93
+                    }
+            </style>
+            <path d="M106 103.4l-33 44.9h38.4c6.8 0 12.8 4.4 14.9 10.9L161 112h-41c-5.9 0-11.3-3.3-14-8.6z" fill="none">
+            </path>
+            <path d="M52.6 75.3c0-8.1-6.2-14.9-14.3-15.6 8.6 1 14.9 8.7 13.9 17.4-.7 6.7-5.7 12.2-12.3 13.6h.3c7.2-1.5 12.4-7.9 12.4-15.4zM37.1 59.6h.5c-.2.1-.3 0-.5 0z">
+            </path>
+            <path d="M207 102c.7-1.8 1-3.7 1-5.6 0-8.6-7-15.5-15.6-15.6h-71.6c.7-1.8 1.1-3.7 1.1-5.7 0-8.6-7-15.5-15.6-15.5H37.1h1.2c8.6.8 15 8.5 14.1 17.1-.7 6.8-5.6 12.4-12.3 13.9h36.5l-46.4 63.2-.9 1.3c-1.7 2.5-2.7 5.5-2.6 8.6 0 8.6 7 15.5 15.6 15.6H112c.4.1.8.1 1.1.2v.5l-.3 2.5c0 8.6 7 15.5 15.6 15.6H194c-8.5-1.6-14.1-9.9-12.5-18.4 1.4-7.4 7.9-12.8 15.5-12.8.5 0 1.1 0 1.6.1-.6-.1-1.2-.1-1.7-.1h-37.6l43-58.5 4.7-6.4zm-80.6 57.2c-2.1-6.5-8.1-10.9-14.9-10.9H73.1l33-44.9c2.6 5.3 8 8.6 13.9 8.6h41.1l-34.7 47.2zM25.7 64.2z">
+            </path>
+            <path class="logo_svg__st1" d="M208.1 96.4c0 1.9-.3 3.8-1 5.6l24.7-33.6c5-7 3.4-16.7-3.6-21.7-6.9-4.9-16.4-3.5-21.5 3.3L184 80.9h8.6c8.5 0 15.4 7 15.5 15.5zM181.3 182.7c0 7.5 5.3 14 12.7 15.4h2.9c8.6 0 15.6-7 15.6-15.6 0-6.4-3.9-12.1-9.8-14.5-.4-.1-.8-.3-1.2-.4-.9-.3-1.9-.5-2.9-.6-.5-.1-1.1-.1-1.6-.1-8.7.1-15.7 7.1-15.7 15.8zM121.9 75.2c0 2-.4 3.9-1.1 5.7h1.8l25.5-34.8c5.1-6.9 3.6-16.7-3.3-21.8s-16.7-3.6-21.8 3.3l-23.5 32h6.8c8.6.1 15.6 7 15.6 15.6zM112.8 182.6l.3-2.5v-.5c-.4 0-.8-.1-1.1-.2h-.4l-.3.5-24.2 33c-5.1 6.9-3.7 16.6 3.1 21.8 6.9 5.1 16.6 3.7 21.8-3.1 0-.1.1-.1.1-.2l24.4-33.2h-8.1c-8.6-.1-15.6-7-15.6-15.6zM26.7 163.9c0-3.1.9-6.1 2.6-8.6L3.2 190.8c-5.2 6.9-3.9 16.6 3 21.8s16.6 3.9 21.8-3c.1-.1.2-.3.3-.4l21.9-29.8h-8c-8.6 0-15.5-7-15.5-15.5zM52.4 75.3c0-8-6.1-14.8-14.1-15.6h-1.6c-.4 0-.9 0-1.3.1-1.1.1-2.2.3-3.3.6-.4.1-.7.2-1.1.4-.6.2-1.2.5-1.7.8l-.3.1-1 .6h-.1c-.8.6-1.5 1.2-2.2 1.9l-.1.1c-5.3 5.3-6.2 13.6-2 19.8 0 0 0 .1.1.1 2.9 4.1 7.7 6.6 12.7 6.6h3.4c7.3-1.5 12.6-8 12.6-15.5zM37.6 59.7h.7-.7zM979.1 192.3H885L981.8 89V49.4H866.7c-.5-.1-1-.1-1.5-.1h-27.3c-7.1 0-12.8 5.8-12.8 12.8v14c0 7.1 5.8 12.8 12.8 12.8h84.5l-97.2 103.3v39.6h124.9c.6.1 1.1.1 1.7.1h27.3c7.1 0 12.8-5.8 12.8-12.8v-14c.1-7-5.7-12.8-12.8-12.8zM752.1 185.4c-2.6-1.4-5-3.2-7-5.4-1.9-2.3-3.3-5-4-7.9V91.8h1.5c1 .2 2 .4 3 .4h27.3c7.1 0 12.9-5.7 13-12.8V61.9c0-7.1-5.8-12.8-12.8-12.8h-4.9V49h-27V0h-43.9v178.2c0 12.5 2.6 22.3 7.7 29.3 5.2 7.1 10.9 12.4 17.1 16 7.7 4.4 16.3 7.1 25.2 7.9h43.9v-43.5h-27.3c-4.9 0-8.8-.8-11.8-2.5zM1177.9 83.3c-3.6-6.4-8.2-12.2-13.7-17.1-4.8-4.3-10-8-15.7-11.2-12.5-6.7-26.7-10.3-42.5-10.7-16.1.5-30.4 4.1-42.8 10.8-5.6 3.1-10.9 6.9-15.7 11.2-5.5 4.9-10.1 10.7-13.7 17.1-4.3 7.6-7.5 15.8-9.5 24.3-2.4 9.3-3.6 20.3-3.6 32.8s1.2 23.4 3.6 32.8c2 8.4 5.2 16.6 9.5 24.1 3.6 6.3 8.2 12 13.7 16.7 4.8 4.2 10.1 7.9 15.7 11 12.5 6.5 26.7 9.8 42.8 10.1 15.8-.2 30-3.6 42.5-10.1 5.6-3.1 10.8-6.8 15.7-11 5.4-4.8 10.1-10.4 13.7-16.7 4.3-7.6 7.6-15.7 9.7-24.1 2.5-9.3 3.8-20.3 3.8-32.8s-1.3-23.4-3.8-32.8c-2.1-8.5-5.4-16.7-9.7-24.4zm-32.2 74.4c-.9 6.1-2.9 12-5.8 17.5s-7.2 10.1-12.4 13.5c-5.4 3.6-12.5 5.4-21.4 5.4s-16-1.8-21.4-5.4c-5.2-3.4-9.5-8-12.4-13.5-2.9-5.4-4.8-11.4-5.8-17.5-1.9-11.4-1.9-23.1 0-34.6.9-6.1 2.9-12 5.8-17.5s7.2-10.1 12.4-13.5c5.4-3.6 12.5-5.4 21.4-5.4s16 1.8 21.4 5.4c5.2 3.4 9.5 8 12.4 13.5s4.8 11.4 5.8 17.5c1.9 11.4 1.9 23.1 0 34.6zM1383.1 99.9c-3.7-10.9-8.5-20-14.2-27.2-5.1-6.7-11.5-12.3-18.7-16.6-6-3.5-12.4-6.4-19.1-8.5-5.1-1.6-10.3-2.7-15.7-3.1-4.4-.2-7-.4-7.7-.4-1 0-3.6.1-7.9.4-5.3.4-10.5 1.4-15.5 3.1-6.7 2.1-13.1 4.9-19.1 8.5-7.2 4.3-13.6 9.9-18.7 16.6-5.8 7.2-10.5 16.3-14.2 27.2s-5.6 24.4-5.6 40.5v91.1h43.9v-91.1c0-5.4.5-10.9 1.4-16.2s2.7-10.4 5.4-15.1c2.7-4.6 6.6-8.5 11.2-11.3 4.8-3 11.2-4.5 19.1-4.5s14.3 1.5 19.1 4.5c4.6 2.8 8.4 6.7 11.2 11.3 2.7 4.7 4.5 9.8 5.4 15.1.9 5.3 1.4 10.8 1.4 16.2v91.1h43.9v-91.1c0-16-1.9-29.5-5.6-40.5zM647 83.3c-3.6-6.4-8.2-12.2-13.7-17.1-4.8-4.3-10-8-15.7-11.2-12.5-6.7-26.6-10.3-42.5-10.8-16.1.5-30.4 4.1-42.8 10.8-5.6 3.1-10.9 6.9-15.7 11.2-5.5 4.9-10.1 10.7-13.7 17.1-4.3 7.6-7.5 15.8-9.5 24.3-2.4 9.3-3.6 20.3-3.6 32.8s1.2 23.4 3.6 32.8c2 8.4 5.2 16.6 9.5 24.1 3.6 6.3 8.2 12 13.7 16.7 4.8 4.2 10.1 7.9 15.7 11 12.5 6.5 26.8 9.8 42.8 10.1 15.8-.2 30-3.6 42.5-10.1 5.6-3.1 10.8-6.8 15.7-11 5.5-4.8 10.1-10.4 13.7-16.7 4.3-7.6 7.6-15.7 9.7-24.1 2.5-9.3 3.8-20.3 3.8-32.8s-1.3-23.4-3.8-32.8c-2.2-8.5-5.4-16.6-9.7-24.3zm-32.2 74.4c-.9 6.1-2.9 12-5.8 17.5s-7.2 10.1-12.4 13.5c-5.4 3.6-12.5 5.4-21.4 5.4s-16-1.8-21.4-5.4c-5.2-3.4-9.5-8-12.4-13.5s-4.8-11.4-5.8-17.5c-1.9-11.4-1.9-23.1 0-34.6.9-6.1 2.9-12 5.8-17.5s7.2-10.1 12.4-13.5c5.4-3.6 12.5-5.4 21.4-5.4s16 1.8 21.4 5.4c5.2 3.4 9.5 8 12.4 13.5s4.8 11.4 5.8 17.5c1.9 11.4 1.9 23.1 0 34.6zM447.6 191.9h-94.2l96.8-103.3V49H335.1c-.5-.1-1-.1-1.5-.1h-27.3c-7.1 0-12.8 5.8-12.8 12.8v14c0 7.1 5.8 12.8 12.8 12.8h84.5l-97.2 103.3v39.6h124.9c.6.1 1.1.1 1.7.1h27.3c7.1 0 12.8-5.8 12.8-12.8v-14c.1-7-5.6-12.8-12.7-12.8z">
+            </path>
+           </svg>
+          </a>
+          <div class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth">
+           <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink" data-shrink="true" for="search-textfield" id="search-textfield-label">
+            Search…
+           </label>
+           <div aria-label="search" class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedStart">
+            <div class="MuiInputAdornment-root MuiInputAdornment-positionStart">
+             <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+              <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+              </path>
+             </svg>
+            </div>
+            <input aria-invalid="false" class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedStart" id="search-textfield" type="text" value=""/>
+           </div>
+          </div>
+          <div aria-expanded="false" class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon" name="city" role="combobox">
+           <div class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth">
+            <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled" data-shrink="true" for="mui-5014" id="mui-5014-label">
+             Выберите город
+            </label>
+            <div class="MuiInputBase-root MuiInput-root MuiInput-underline MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd">
+             <input aria-autocomplete="list" aria-invalid="false" autocapitalize="none" autocomplete="off" class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd" id="mui-5014" spellcheck="false" type="text" value="Челябинск"/>
+             <div class="MuiAutocomplete-endAdornment">
+              <button aria-label="Clear" class="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-clearIndicator MuiAutocomplete-clearIndicatorDirty" tabindex="-1" title="Clear" type="button">
+               <span class="MuiIconButton-label">
+                <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                 </path>
+                </svg>
+               </span>
+               <span class="MuiTouchRipple-root">
+               </span>
+              </button>
+              <button aria-label="Open" class="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-popupIndicator" tabindex="-1" title="Open" type="button">
+               <span class="MuiIconButton-label">
+                <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+                 <path d="M7 10l5 5 5-5z">
+                 </path>
+                </svg>
+               </span>
+               <span class="MuiTouchRipple-root">
+               </span>
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div aria-expanded="false" class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon" name="category" role="combobox">
+           <div class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth">
+            <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated" data-shrink="false" for="mui-2414" id="mui-2414-label">
+             Выберите категорию
+            </label>
+            <div class="MuiInputBase-root MuiInput-root MuiInput-underline MuiAutocomplete-inputRoot MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd">
+             <input aria-autocomplete="list" aria-invalid="false" autocapitalize="none" autocomplete="off" class="MuiInputBase-input MuiInput-input MuiAutocomplete-input MuiAutocomplete-inputFocused MuiInputBase-inputAdornedEnd" id="mui-2414" spellcheck="false" type="text" value=""/>
+             <div class="MuiAutocomplete-endAdornment">
+              <button aria-label="Clear" class="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-clearIndicator" tabindex="-1" title="Clear" type="button">
+               <span class="MuiIconButton-label">
+                <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                 </path>
+                </svg>
+               </span>
+               <span class="MuiTouchRipple-root">
+               </span>
+              </button>
+              <button aria-label="Open" class="MuiButtonBase-root MuiIconButton-root MuiAutocomplete-popupIndicator" tabindex="-1" title="Open" type="button">
+               <span class="MuiIconButton-label">
+                <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+                 <path d="M7 10l5 5 5-5z">
+                 </path>
+                </svg>
+               </span>
+               <span class="MuiTouchRipple-root">
+               </span>
+              </button>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <ul class="MuiList-root MuiList-padding">
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/bytovaya-elektronika" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Бытовая электроника
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/dlya-doma-i-dachi" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Для дома и дачи
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/zhivotnye" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Животные
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/lichnye-veshhi" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Личные вещи
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/nedvizhimost" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Недвижимость
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/podarki" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Подарки
+           </li>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/rabota" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Работа
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/spetstehnika-2" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Спецтехника
+           </li>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/motors" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Транспорт и запчасти
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/uslugi" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Услуги
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+          <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-buttonLeaf-409 depth-0 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/categories/hobbi-i-otdyh" style="padding-left:24px;padding-right:24px">
+           <li class="MuiListItem-root">
+            Хобби и отдых
+           </li>
+           <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall" focusable="false" viewbox="0 0 24 24">
+            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+            </path>
+           </svg>
+          </a>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </nav>
+    <div class="AppFrame-root-1">
+     <main class="MuiContainer-root AppFrame-container-2 MuiContainer-maxWidthLg" id="main-content" tabindex="-1">
+      <div>
+       <h1 class="MuiTypography-root MuiTypography-h3">
+        {{ titleTemp }}
+       </h1>
+       <nav aria-label="breadcrumb" class="MuiTypography-root MuiBreadcrumbs-root makeStyles-breadcrumbs-435 MuiTypography-body1 MuiTypography-colorTextSecondary">
+        <p class="MuiBreadcrumbs-ol">
+         {{ categoryTemp }}
+        </p>
+       </nav>
+       <div class="MuiGrid-root makeStyles-mainGrid-434 MuiGrid-container MuiGrid-spacing-xs-5">
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-8">
+         <div aria-live="polite" class="image-gallery image-gallery-using-mouse">
+          <div class="image-gallery-content bottom">
+           <div class="image-gallery-slide-wrapper bottom">
+            <div class="image-gallery-slides">
+
+             <div class="image-gallery-slide center" role="button" style="-webkit-transform:translate3d(0%, 0, 0);-moz-transform:translate3d(0%, 0, 0);-ms-transform:translate3d(0%, 0, 0);-o-transform:translate3d(0%, 0, 0);transform:translate3d(0%, 0, 0)" tabindex="-1">
+              <div>
+                  {% if images != [] %}
+               <img class="image-gallery-image" src=" {{ images[0][0] }}"/>
+                  {% endif %}
+              </div>
+             </div>
+
+            </div>
+
+           </div>
+           <div class="image-gallery-thumbnails-wrapper bottom">
+            <div class="image-gallery-thumbnails">
+             <div aria-label="Thumbnail Navigation" class="image-gallery-thumbnails-container" style="-webkit-transform:translate3d(0px, 0, 0);-moz-transform:translate3d(0px, 0, 0);-ms-transform:translate3d(0px, 0, 0);-o-transform:translate3d(0px, 0, 0);transform:translate3d(0px, 0, 0)">
+
+               <div class="image-gallery-thumbnail-inner">
+                                 {% if images != [] %}
+                   {% for i in range(1,len_img) %}
+                <img class="image-gallery-thumbnail-image" src="{{ images[i][0] }}"/>
+                   {% endfor %}
+                                 {% endif %}
+               </div>
+
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <p>
+          Цена: {{ priceTemp }}
+         </p>
+         <p>
+          {{ areaTemp }}
+         </p>
+         <div>
+          {{ descriptionTemp }}
+         </div>
+        </div>
+        <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-3">
+         <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom">
+          Вам может понравиться
+         </h6>
+         <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-item">
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-12 MuiGrid-grid-lg-12">
+           <div class="MuiPaper-root MuiCard-root makeStyles-card-441 MuiPaper-elevation1 MuiPaper-rounded">
+            <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-cardLink-444 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/listings/:slug">
+             <div class="MuiCardMedia-root makeStyles-cardMedia-442" style='background-image:url("https://www.vladtime.ru/uploads/posts/2018-10/1538726718_11.jpg")'>
+             </div>
+            </a>
+            <div class="MuiCardContent-root makeStyles-cardContent-443">
+             <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-cardLink-444 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/listings/:slug">
+              <h5 class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom">
+              </h5>
+             </a>
+             <p class="MuiTypography-root MuiTypography-body1">
+              Mazda 6
+                 <br>Цена: 800 000 ₽
+             </p>
+             <p class="MuiTypography-root MuiTypography-body1">
+             </p>
+            </div>
+           </div>
+          </div>
+          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-12 MuiGrid-grid-lg-12">
+           <div class="MuiPaper-root MuiCard-root makeStyles-card-441 MuiPaper-elevation1 MuiPaper-rounded">
+            <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-cardLink-444 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/listings/:slug">
+             <div class="MuiCardMedia-root makeStyles-cardMedia-442" style='background-image:url("https://povozcar.ru/wp-content/uploads/Ford-Explorer-2015-2016.jpg")'>
+             </div>
+            </a>
+            <div class="MuiCardContent-root makeStyles-cardContent-443">
+             <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-cardLink-444 makeStyles-link-278 MuiTypography-colorPrimary" href="http://localhost:3000/listings/:slug">
+              <h5 class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom">
+              </h5>
+             </a>
+             <p class="MuiTypography-root MuiTypography-body1">
+              Ford Explorer<br>Цена: 1 150 000 ₽
+             </p>
+             <p class="MuiTypography-root MuiTypography-body1">
+             </p>
+            </div>
+           </div>
+          </div>
+         </div>
+         <h6 class="MuiTypography-root makeStyles-sidebarSection-440 MuiTypography-h6 MuiTypography-gutterBottom">
+          Join us!
+         </h6>
+         <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-278 MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayBlock" href="http://localhost:3000/listings/zhenskaya-sportivnaya-obuv-855#">
+          <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center">
+           <div class="MuiGrid-root MuiGrid-item">
+            <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+             <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z">
+             </path>
+            </svg>
+           </div>
+           <div class="MuiGrid-root MuiGrid-item">
+            Instagram
+           </div>
+          </div>
+         </a>
+         <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-278 MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayBlock" href="http://localhost:3000/listings/zhenskaya-sportivnaya-obuv-855#">
+          <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center">
+           <div class="MuiGrid-root MuiGrid-item">
+            <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+             <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z">
+             </path>
+            </svg>
+           </div>
+           <div class="MuiGrid-root MuiGrid-item">
+            Twitter
+           </div>
+          </div>
+         </a>
+         <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-278 MuiTypography-body1 MuiTypography-colorPrimary MuiTypography-displayBlock" href="http://localhost:3000/listings/zhenskaya-sportivnaya-obuv-855#">
+          <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center">
+           <div class="MuiGrid-root MuiGrid-item">
+            <svg aria-hidden="true" class="MuiSvgIcon-root" focusable="false" viewbox="0 0 24 24">
+             <path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z">
+             </path>
+            </svg>
+           </div>
+           <div class="MuiGrid-root MuiGrid-item">
+            Facebook
+           </div>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <footer class="makeStyles-footer-450">
+       <h6 class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom MuiTypography-alignCenter">
+       </h6>
+       <p class="MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextSecondary MuiTypography-alignCenter">
+       </p>
+       <p class="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter">
+        Copyright ©
+        <a class="MuiTypography-root MuiLink-root MuiLink-underlineHover makeStyles-link-278 MuiTypography-colorInherit" href="http://localhost:3000/">
+         ZotZon
+        </a>
+        2020
+        .
+       </p>
+      </footer>
+     </main>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
